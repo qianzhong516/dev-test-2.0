@@ -7,12 +7,12 @@ const app = express()
 
 const schema = buildSchema(`
     type Query {
-        getLongestRaisingSeq(arr: [Int]): [Int]
+        input(arr: [Int]): [Int]
     }
 `)
 
 const root = {
-    getLongestRaisingSeq: ({arr}) => {
+    input: ({arr}) => {
 
         const allSeq = [] // all continous sequences
         let end = false // flag to stop computing
