@@ -2,7 +2,7 @@ const express = require('express')
 const { graphqlHTTP } = require('express-graphql')
 const { buildSchema } = require('graphql')
 
-const PORT = 8000 | process.env.PORT
+const PORT = process.env.PORT || 8000 
 const app = express()
 
 const schema = buildSchema(`
