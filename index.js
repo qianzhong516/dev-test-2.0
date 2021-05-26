@@ -31,7 +31,7 @@ const root = {
 
             for(let j=i; j < sequence.length; j++) {
 
-                if(sequence[j] < sequence[j+1])
+                if(sequence[j] <= sequence[j+1])
                     seq.push(sequence[j+1])
                 else{
                     // the next i should be j+1, and +1 will be done in the outer loop
