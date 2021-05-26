@@ -32,7 +32,7 @@ Validation result:
       },
       {
         "description": "Sequence already sorted",
-        "passed": false,
+        "passed": false, // this has been fixed!
         "input": "[-91,-81,-68,-55,-55,-11,-3,4,20]",
         "expected": "[-91,-81,-68,-55,-55,-11,-3,4,20]",
         "actual": "[-55,-11,-3,4,20]",
