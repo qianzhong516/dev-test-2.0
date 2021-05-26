@@ -7,28 +7,28 @@ const app = express()
 
 const schema = buildSchema(`
     type Query {
-        input(arr: [Int]): [Int]
-    }
+        longestRaisingSequence(input: [Int]): [Int],
+    },
 `)
 
 const root = {
-    input: ({arr}) => {
+    longestRaisingSequence: ({input}) => {
 
         const allSeq = [] // all continous sequences
         let end = false // flag to stop computing
 
-        for(let i=0; i < arr.length; i++) {
+        for(let i=0; i < input.length; i++) {
 
             if(end) 
                 break
 
             // the current continous sequence
-            let seq = [arr[i]]
+            let seq = [input[i]]
 
-            for(let j=i; j < arr.length; j++) {
+            for(let j=i; j < input.length; j++) {
 
-                if(arr[j] < arr[j+1])
-                    seq.push(arr[j+1])
+                if(input[j] < input[j+1])
+                    seq.push(input[j+1])
                 else{
                     // the next i should be j+1, and +1 will be done in the outer loop
                     i = j  
@@ -37,7 +37,7 @@ const root = {
                 }
 
                 // if j reaches the end, stop computing
-                if(j === arr.length-1) {
+                if(j === input.length-1) {
                     allSeq.push(seq)
                     end = true
                 }
