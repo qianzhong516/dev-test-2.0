@@ -14,6 +14,10 @@ const schema = buildSchema(`
 const root = {
     longestRaisingSequence: ({sequence}) => {
 
+        // if sequence is empty
+        if(!sequence.length)
+            return []
+
         const allSeq = [] // all continous sequences
         let end = false // flag to stop computing
 
