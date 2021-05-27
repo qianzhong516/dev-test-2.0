@@ -18,7 +18,7 @@ const root = {
         if(!sequence.length)
             return []
 
-        const allSeq = [] // all continous sequences
+        const allSeq = [] // all continuous sequences
         let end = false // flag to stop computing
 
         for(let i=0; i < sequence.length; i++) {
@@ -26,7 +26,7 @@ const root = {
             if(end) 
                 break
 
-            // the current continous sequence
+            // the current continuous sequence
             let seq = [sequence[i]]
 
             for(let j=i; j < sequence.length; j++) {
