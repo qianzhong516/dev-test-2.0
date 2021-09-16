@@ -1,5 +1,5 @@
 # Dev Test
-The deployed link is at: https://dev-test-516.herokuapp.com/.
+The deployed link is at: https://dev-test-516.herokuapp.com/graphql.
 
 Validation result:
 ```json
